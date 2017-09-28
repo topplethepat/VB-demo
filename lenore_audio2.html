@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Highlight Demo</title>
+<meta name="viewport"  content="width=device-width, initial-scale=1, user-scalable=no">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+    
+audio {
+    margin-top: 40px;
+    margin-left: 270px;
+    margin-right: 50px;
+    border-style: groove;
+    outline-style: groove; color: white;
+}
+
+h5 {
+    margin-left: 70px;
+    color: rgb(60,60,60);
+    font-family: "Georgia";
+}
+
+.line {
+    margin-left: 70px;
+    font-family: "Georgia";
+
+    
+}
+.VBbox {
+    background-color: gray;
+    width: 60%;
+    height: 3%;
+    border-style: groove;
+    padding-right: 30px;
+     outline-style: groove; color: white;
+     margin-top: 80px;
+     -webkit-margin-left: 240px;
+     -o-margin-left: 240px;
+     -moz-margin-left: 240px;
+     -ms-margin-left: 240px;
+     margin-left: 240px;
+     -webkit-margin-right: 262px;
+     -o-margin-right: 262px;
+     -moz-margin-right: 262px;
+     -ms-margin-right: 262px;
+     margin-right: 262px;
+    
+}
+#machineT {
+    font-family: "Georgia";
+    background-color: #DCDCDC;
+    width: 60%;
+    border-style: groove;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    outline-style: groove; color: white;
+    margin-left: 240px;
+    
+}
+#playZ {
+    background-color: #DCDCDC;
+    width: 60%;
+     border-style: groove;
+     padding-right: 30px;
+     padding-bottom: 30px;
+     outline-style: groove; color: white;
+     
+     margin-left: 240px;
+    
+}
+ </style>   
+</head>
+<body> 
+
+    <div class= "naturallanguageform">
+        <div class="nlfinner" >
+            <p class = "line" >
+                <div class = "VBbox">
+                    <p class = "line">
+                        <img src = "logoVB.png" style = "height: 30px; padding-left: 1px">
+                 </div>  
+                 <div id = "playZ">
+                <audio id="audiofile" src="highlight.mp4" controls></audio>
+        
+            </div>
+    
+            <div id = "machineT">
+                
+                <h5>TRANSCRIPTION</h5>
+             </p>   
+        <p class="line" id="subtitles" style = "color: rgb(60,60,60)"></p><br>
+           
+    </div>
+</div>
+
+        <script>
+        ( function(win, doc) {
+            var audioPlayer = doc.getElementById("audiofile");
+            var subtitles = doc.getElementById("subtitles");
+            
+                var syncData = [{"p":1,"c":0.652,"s":0.269,"e":0.780,"w":"Hi"},{"p":2,"c":0.317,"s":0.849,"e":1.130,"w":"I'm"},{"p":3,"c":0.958,"s":1.140,"e":1.390,"w":"going"},{"p":4,"c":0.899,"s":1.400,"e":1.540,"w":"to"},{"p":5,"c":0.332,"s":1.550,"e":2.020,"w":"mention"},{"p":6,"c":0.976,"s":2.030,"e":2.320,"w":"my"},{"p":7,"c":0.984,"s":2.360,"e":3.050,"w":"address","class":"alert"},{"p":8,"c":0.479,"s":3.060,"e":3.330,"w":"which"},{"p":9,"c":0.957,"s":3.340,"e":3.439,"w":"is"},{"p":10,"c":0.905,"s":3.449,"e":4.009,"w":"something"},{"p":11,"c":0.982,"s":4.020,"e":4.710,"w":"something"},{"p":12,"c":0.133,"s":5.230,"e":5.430,"w":"on"},{"p":13,"c":0.917,"s":5.440,"e":5.580,"w":"this"},{"p":14,"c":0.971,"s":5.589,"e":6.150,"w":"street"},{"p":15,"c":0.346,"s":6.200,"e":6.359,"w":"and"},{"p":16,"c":0.906,"s":6.370,"e":6.710,"w":"also"},{"p":17,"c":0.97,"s":6.720,"e":6.899,"w":"my"},{"p":18,"c":0.977,"s":6.910,"e":7.310,"w":"phone","class":"alert"},{"p":19,"c":0.889,"s":7.319,"e":7.730,"w":"number"},{"p":20,"c":0.436,"s":7.740,"e":8.050,"w":"which"},{"p":21,"c":0.926,"s":8.059,"e":8.260,"w":"is"},{"p":22,"c":0.845,"s":8.269,"e":8.559,"w":"five"},{"p":23,"c":0.97,"s":8.570,"e":8.880,"w":"five"},{"p":24,"c":0.941,"s":8.889,"e":9.380,"w":"five"},{"p":25,"c":0.966,"s":9.420,"e":9.870,"w":"six"},{"p":26,"c":0.86,"s":9.880,"e":10.400,"w":"seven"},{"p":27,"c":0.745,"s":10.440,"e":10.790,"w":"six"},{"p":28,"c":0.848,"s":9.870,"e":11.750,"w":"seven"},{"p":29,"c":0,"s":11.750,"e":11.750,"w":".","m":"punc"}];
+                // var syncData = [{"p":1,"c":0.652,"s":269,"e":780,"w":"Hi"},{"p":2,"c":0.317,"s":849,"e":1130,"w":"I'm"},{"p":3,"c":0.958,"s":1140,"e":1390,"w":"going"},{"p":4,"c":0.899,"s":1400,"e":1540,"w":"to"},{"p":5,"c":0.332,"s":1550,"e":2020,"w":"mention"},{"p":6,"c":0.976,"s":2030,"e":2320,"w":"my"},{"p":7,"c":0.984,"s":2360,"e":3050,"w":"address"},{"p":8,"c":0.479,"s":3060,"e":3330,"w":"which"},{"p":9,"c":0.957,"s":3340,"e":3439,"w":"is"},{"p":10,"c":0.905,"s":3449,"e":4009,"w":"something"},{"p":11,"c":0.982,"s":4020,"e":4710,"w":"something"},{"p":12,"c":0.133,"s":5230,"e":5430,"w":"on"},{"p":13,"c":0.917,"s":5440,"e":5580,"w":"this"},{"p":14,"c":0.971,"s":5589,"e":6150,"w":"street"},{"p":15,"c":0.346,"s":6200,"e":6359,"w":"and"},{"p":16,"c":0.906,"s":6370,"e":6710,"w":"also"},{"p":17,"c":0.97,"s":6720,"e":6899,"w":"my"},{"p":18,"c":0.977,"s":6910,"e":7310,"w":"phone"},{"p":19,"c":0.889,"s":7319,"e":7730,"w":"number"},{"p":20,"c":0.436,"s":7740,"e":8050,"w":"which"},{"p":21,"c":0.926,"s":8059,"e":8260,"w":"is"},{"p":22,"c":0.845,"s":8269,"e":8559,"w":"five"},{"p":23,"c":0.97,"s":8570,"e":8880,"w":"five"},{"p":24,"c":0.941,"s":8889,"e":9380,"w":"five"},{"p":25,"c":0.966,"s":9420,"e":9870,"w":"six"},{"p":26,"c":0.86,"s":9880,"e":10400,"w":"seven"},{"p":27,"c":0.745,"s":10440,"e":10790,"w":"six"},{"p":28,"c":0.848,"s":9870,"e":11750,"w":"seven"},{"p":29,"c":0,"s":11750,"e":11750,"w":".","m":"punc"} ];
+            createTranscript();
+
+            function createTranscript()
+            {
+                var element;
+                var newElementS;
+                for (var i = 0; i < syncData.length; i++) {
+                    element = doc.createElement('span');
+                    element.setAttribute("id", "c_" + i);
+                    // if(syncData[i].class) {element.classList.add(syncData[i].class);}
+                    if(syncData[i].class)element.setAttribute("class", syncData[i].class);
+                    element.innerText = syncData[i].w + " ";
+                    subtitles.appendChild(element);
+                    //newElementS= syncData[i].s / 1000;
+                    //newElementE = syncData[i].e / 1000;
+                    //console.log(newElementE)
+                    
+                }
+
+            audioPlayer.addEventListener("timeupdate", function(e){
+
+                syncData.forEach(function(element, index, array){
+                    for (var i = 0; i <syncData.length; i++) {
+                    newElementS = syncData[i].s / 1000;
+                    newElementE = syncData[i].e / 1000;
+               
+                
+                    if (subtitles.children[index].classList.contains("alert") && audioPlayer.currentTime >= element.s && audioPlayer.currentTime <= element.e)
+                        subtitles.children[index].style.backgroundColor = "#4ce600";
+                        console.log(newElementS) 
+                }
+                });
+            });
+          
+           } 
+        }(window, document));
+        </script>
+    </p>
+
+       </body> 
+ </html>       
